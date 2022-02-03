@@ -28,7 +28,7 @@ a{
 .menu-btn{
     width: 3rem;
     height: 3rem;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-around;
 }
@@ -69,6 +69,20 @@ a{
     position: fixed;
     top: 0;
     left: 0;
+    display: none;
+}
+/* end of side drawer */
+
+#side-drawer header{
+    height: 5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 5%;
+}
+
+#side-drawer:target{
+    display: block;
 }
 
 #side-drawer ul{
@@ -125,6 +139,10 @@ main h1{
     text-align: center;
 }
 
+.food-item-content h2{
+    margin: 0 0 1rem 0;
+}
+
 .btn{
     background-color: rgb(228, 157, 77);
     color: white;
@@ -140,6 +158,10 @@ main h1{
 @media (max-width: 48rem){
     #main-header nav{
         display: none;
+    }
+
+    .menu-btn{
+        display: flex;
     }
 
     #latest-products ul{
